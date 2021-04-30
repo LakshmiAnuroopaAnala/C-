@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int base,power;
+	int twoEnd[5]={4,2,4,8,6};
+	int threeEnd[5]={4,3,9,7,1};
+	int sevenEnd[5]={4,7,9,3,1};
+	int eightEnd[5]={4,8,4,2,8};
+	cin>>base>>power;
+	if (base%10==0 || base%10==1 || base%10==5 || base%10==6)
+	{
+	   cout<<base%10;	
+	}
+	else if (base%10==4)
+	{
+		if  ((power%10)%2==0)
+		{
+			cout<<"6";
+		}
+		else
+		{
+			cout<<"4";
+		}
+	}
+	else if (base%10==9)
+	{
+		if  ((power%10)%2==0)
+		{
+			cout<<"1";
+		}
+		else
+		{
+			cout<<"9";
+		}
+	}
+	else if (base%10==2)
+	{
+		cout<<twoEnd[(power%100)%4];
+	}
+	else if (base%10==3)
+	{
+		cout<<threeEnd[(power%100)%4];
+	}
+	else if (base%10==7)
+	{
+		cout<<sevenEnd[(power%100)%4];
+	}
+	else if (base%10==8)
+	{
+		cout<<eightEnd[(power%100)%4];
+	}
+	else
+	{
+		cout<<"";
+	}
+	return 0;
+}
